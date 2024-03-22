@@ -30,3 +30,6 @@ this indicates a rather straightfoward process of cleaning the data as the bread
 
 ## Exploratory Data Analysis
 
+<iframe src="assets/df.html" width="800" height="600" frameborder="0" ></iframe>
+This grouped table shows the average outage duration, total electricity consumption, and total gross state product per US state. This helps us visualize the relationship between these three variables.
+
