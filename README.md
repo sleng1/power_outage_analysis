@@ -36,3 +36,5 @@ This grouped table shows the average outage duration, total electricity consumpt
 <iframe src="assets/duration_year.html" width="800" height="600"></iframe>
 This plot explores the relationship between year and the duration of a power outage. As you can see, power outages seem to have gottten longer as the years have progressed.
 
+<iframe src="assets/sales.html" width="800" height="600"></iframe>
+This plot looks at the distribution of total sales in a given state  in a given year. There seems to be a bimodal distribution, with local means just below 10 million and 20 million. However, it seems the majority of states consumed less that 15 million megawatt-hours of electricity, with notable outliers past 40 million.
