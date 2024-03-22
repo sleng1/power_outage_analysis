@@ -122,3 +122,14 @@ After trying out multiple classifier models, we found gradient boosted ensembles
 We were able to improve our model's f1 score to 0.8606 (over 6% increase from baseline). Our model got better at prediction categories with fewer data.\
 Below is a confusion matrix for our final model:\
 <iframe src="assets/cm.html" width="800" height="600"></iframe>
+
+## Fairness Analysis
+
+For our fairness analysis, we will test to see whether our model performs the same for outages in large and small states. We will consider a state large if its population its population is 10 million or greater, and small if its population is less than 10 million.\
+**Null hypothesis:** our model performs the same for outages in large and small states.\
+**Alternative hypothesis:** our model is performs differently for large and small states.\
+**Test statistic:** the absolute difference between the f1 score for large states and the f1 score for small states.\
+As seen above, the observed test statistic is just over 0.02.\
+We obtained a p-value of 0.063, meaning there is a 6.3% chance that the differnce between our models score in large and small stats is greater than or equal to what we observed. We can visualize this in the histogram below.\
+<iframe src="assets/fairness.html" width="800" height="600"></iframe>
+As 0.063 > 0.05, we fail to reject the null at the 5% significance level.
