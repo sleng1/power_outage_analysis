@@ -37,7 +37,7 @@ This grouped table shows the average outage duration, total electricity consumpt
 This plot explores the relationship between year and the duration of a power outage. As you can see, power outages seem to have gottten longer as the years have progressed.\
 
 <iframe src="assets/sales.html" width="800" height="600"></iframe>
-This plot looks at the distribution of total sales in a given state  in a given year. There seems to be a bimodal distribution, with local means just below 10 million and 20 million. However, it seems the majority of states consumed less that 15 million megawatt-hours of electricity, with notable outliers past 40 million.\
+This plot looks at the distribution of total sales in a given state  in a given year. There seems to be a bimodal distribution, with local means just below 10 million and 20 million. However, it seems the majority of states consumed less that 15 million megawatt-hours of electricity, with notable outliers past 40 million.
 
 ## Assessment of Missingness
 
@@ -58,7 +58,7 @@ We conduct a permutation test:\
 **alternate hypothesis:** The average COM.PRICE for incidents where CUSTOMERS.AFFECTED were recorded and incidents where CUSTOMERS.AFFECTED were missing are different\
 Our test statistic is absolute difference in group means/K-S statistic and our significance level is 0.05\
 quick note: CUSTOMERS.AFFECTED is highly MAR on DEMAND.LOSS.MW. can use just in case\
-<iframe src="assets/missingness.html" width="800" height="600"></iframe>\
+<iframe src="assets/missingness.html" width="800" height="600"></iframe>
 <iframe src="assets/missingness2.html" width="800" height="600"></iframe>\
 Our significance level is around 0.31. We fail to reject the null hypothesis. There is not enough evidence in support for the column CUSTOMERS.AFFECTED is conditioned on COM.PRICE.\
 Next, we test if 'CUSTOMERS.AFFECTED' is missing at random conditioned on 'OUTAGE.DURATION'\
@@ -68,11 +68,11 @@ We conduct a permutation test:\
 Our test statistic is absolute difference in group means and our significance level is 0.05\
 <iframe src="assets/missingness3.html" width="800" height="600"></iframe>\
 Our significance level is around 0.02. We reject the null hypothesis. There is evidence in support for the column CUSTOMERS.AFFECTED is MAR conditioned on OUTAGE.DURATION.\
-This concludes our analysis of missingness of CUSTOMERS.AFFECTED on two different columns where it is dependent on one and not dependent on the other\
+This concludes our analysis of missingness of CUSTOMERS.AFFECTED on two different columns where it is dependent on one and not dependent on the other
 
 ## Hypothesis Testing
 
-### PERMUTATION TEST\
+### PERMUTATION TEST
 The central focus of this project has a very economic flavor to it; elaborating on the question at hand, our analysis revolved around the simple relationship between prosperity of a state and severity/frequency of power outages, however these features may be quantified. From inception, we always hypothesized that states with greater levels of economic activity would most likely have a higher frequency of power outages. We performed a permutation test to measure this hypothesis.\
 Our first step was to aggregate the data by state and perform the necessary operations to extract out the relevant features.\
 We first grouped the data by 'U.S._STATE" and selected 3 columns per variable that well-quantified their respective measurements.\
@@ -92,9 +92,9 @@ Alternative hypothesis: Comparing the states in the upper and lower quartiles of
 We frame this using a permutation test. We use the test statistic of difference in group means. p-value of 0.05\
 we first compute the test statistic by grouping by quartiles in 'PC.REALGSP.STATE.' We then select the column 'DEMAND.LOSS.MW' which contains the total number of power outages throughout the years. We then find the mean of the average number of outages and then locate the groups '25' and '100,' indicating the top groups. Find the test statistic is done by subtracted the average of the 100 group by the 25 group.\
 We run this simulation 10000 times and shuffle the 'PC.REALGSP.STATE' column using np.random.permutation. We compute the simulated statistic in each iteration and then store them all in an array.\
-We find the p-value by counting the number of simulated statistics as extreme or even more extreme than our test statistics and we divide by 10000.\
+We find the p-value by counting the number of simulated statistics as extreme or even more extreme than our test statistics and we divide by 10000.
 
 ### Analysis of hypothesis test\
 Our resulting p value is roughly 0.039 after lots of testing. As such, we reject the null hypothesis. Our result is statistically significant.\
 The significance level of this test plays a role in our determining of the question we have for our data but there are still other categories needed to be tested in order for us to have a full conclusion. From the significant of this result, we have some stronger evidence for a positive correlation between the variables in question\
-Analyzing the methodology, we followed a standard protocol for permutation tests and we did not re-invent the wheel in anyway shape or form. Some potential issues with our procedure could possibly arise from our aggregation techniques and our omission of states in the middle half of the GSP.\
+Analyzing the methodology, we followed a standard protocol for permutation tests and we did not re-invent the wheel in anyway shape or form. Some potential issues with our procedure could possibly arise from our aggregation techniques and our omission of states in the middle half of the GSP.
