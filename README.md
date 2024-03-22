@@ -28,4 +28,5 @@ this indicates a rather straightfoward process of cleaning the data as the bread
 1. Dropped the first few rows of the dataset that contained empty data and renamed the columns with the column names stored in the 5th row.
 2. Combined the columns 'OUTAGE.START.DATE' and 'OUTAGE.START.TIME' into a single column named 'OUTAGE.START' of Pandas Timestamp objects. Simillar procedure for 'OUTAGE.RESTORATION.DATE' and 'OUTAGE.RESTORATION.TIME' into 'OUTAGE.RESTORATION'. Former columns were dropped and later columns were added. NaN values in the original colums are now NaT values
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
+
