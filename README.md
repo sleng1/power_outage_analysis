@@ -30,6 +30,9 @@ this indicates a rather straightfoward process of cleaning the data as the bread
 
 ## Exploratory Data Analysis
 
-<iframe src="assets/df.html" width="800" height="600" frameborder="0" ></iframe>
+<iframe src="assets/group.html" width="800" height="600" frameborder="0" ></iframe>
 This grouped table shows the average outage duration, total electricity consumption, and total gross state product per US state. This helps us visualize the relationship between these three variables.
+
+<iframe src="assets/duration_year.html" width="800" height="600"></iframe>
+This plot explores the relationship between year and the duration of a power outage. As you can see, power outages seem to have gottten longer as the years have progressed.
 
