@@ -21,3 +21,11 @@ The three columns we selected for measuring the prosperity of a state: 'TOTAL.SA
 'TOTAL.CUSTOMERS' contains the total amount of customers served in the state per year.
 'PC.REALGSP.STATE' contains the per capita real gross state product (GSP) in the U.S. state, measured in 2009 dollars.
 We also included the 'POPULATION' column just in case.
+
+## Data Cleaning
+"The dataset is rigorously preprocessed and checked for inconsistencies to minimize the measurement errors leveraging different methods such as data visualization, analyzing the descriptive statistics as well as manual cross-checking of the observations."
+this indicates a rather straightfoward process of cleaning the data as the breadth of features along with the precision of collection allows us to readily utilize the data for further analysis
+1. Dropped the first few rows of the dataset that contained empty data and renamed the columns with the column names stored in the 5th row.
+2. Combined the columns 'OUTAGE.START.DATE' and 'OUTAGE.START.TIME' into a single column named 'OUTAGE.START' of Pandas Timestamp objects. Simillar procedure for 'OUTAGE.RESTORATION.DATE' and 'OUTAGE.RESTORATION.TIME' into 'OUTAGE.RESTORATION'. Former columns were dropped and later columns were added. NaN values in the original colums are now NaT values
+
+### Exploratory Data Analysis
